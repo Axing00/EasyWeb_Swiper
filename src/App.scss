@@ -1,4 +1,8 @@
 .swiper-slide {
-  height: 300px;
   background-color: #ccc;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
 }
