@@ -10,6 +10,9 @@ import "swiper/scss/pagination";
 import "swiper/scss/navigation";
 import "swiper/scss/scrollbar";
 
+import prevButtonImage from "./imgs/button/chevron-left.svg";
+import nextButtonImage from "./imgs/button/chevron-right.svg";
+
 const data = [
   {
     id: 1,
@@ -39,12 +42,19 @@ export default () => {
       modules={[Navigation, Pagination, Scrollbar]}
       spaceBetween={20}
       slidesPerView={3}
-      navigation
+      navigation={{
+        prevEl: `.swiper-button-prev`,
+        nextEl: `.swiper-button-next`,
+      }}
       pagination={{ clickable: true }}
       scrollbar={{ draggable: true }}
-      onSlideChange={() => console.log("slide change")}
-      onSwiper={(swiper) => console.log(swiper)}
     >
+      <div className="swiper-button-prev">
+        <img src={prevButtonImage} alt="Previous" />
+      </div>
+      <div className="swiper-button-next">
+        <img src={nextButtonImage} alt="Next" />
+      </div>
       {data.map((user) => (
         <SwiperSlide key={user.id}>
           {/* <div>{user.testimonial}</div> */}
