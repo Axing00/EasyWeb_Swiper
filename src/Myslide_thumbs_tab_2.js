@@ -14,54 +14,36 @@ import "swiper/scss/thumbs";
 import prevButtonImage from "./imgs/button/chevron-left.svg";
 import nextButtonImage from "./imgs/button/chevron-right.svg";
 
-const data = [
-  {
-    id: 1,
-    imgs: "https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces/yYrvN5WFeGYjJnRzhY0QXuo4Isw.jpg",
-    alt: "슬라이드이미지1",
-  },
-  {
-    id: 2,
-    imgs: "https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces/8I37NtDffNV7AZlDa7uDvvqhovU.jpg",
-    alt: "슬라이드이미지2",
-  },
-  {
-    id: 3,
-    imgs: "https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces/bQXAqRx2Fgc46uCVWgoPz5L5Dtr.jpg",
-    alt: "슬라이드이미지3",
-  },
-  {
-    id: 4,
-    imgs: "https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces/bQXAqRx2Fgc46uCVWgoPz5L5Dtr.jpg",
-    alt: "슬라이드이미지4",
-  },
-  {
-    id: 5,
-    imgs: "https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces/bQXAqRx2Fgc46uCVWgoPz5L5Dtr.jpg",
-    alt: "슬라이드이미지4",
-  },
-];
-
 export default () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
+  const [TabTitle, setTabTitle] = useState([
+    "관심종목",
+    "주식",
+    "지수",
+    "외한",
+    "선물",
+    "ETF",
+  ]);
 
   return (
     <div className="market_view">
+      {/* slide_title_tab */}
       <Swiper
         modules={[Thumbs]}
         onSwiper={setThumbsSwiper}
         freeMode={true}
         watchSlidesProgress={true}
-        spaceBetween={20}
+        spaceBetween={0}
         slidesPerView={4}
         className="mySwiper_thumbs"
       >
-        {data.map((slide) => (
-          <SwiperSlide key={slide.id}>
-            <img src={slide.imgs} alt={slide.alt} />
+        {TabTitle.map((title, i) => (
+          <SwiperSlide key={i}>
+            <span>{title}</span>
           </SwiperSlide>
         ))}
       </Swiper>
+      {/* slide_content */}
       <Swiper
         modules={[Navigation, Pagination, Thumbs]}
         spaceBetween={20}
@@ -80,11 +62,8 @@ export default () => {
         <div className="swiper-button-next">
           <img src={nextButtonImage} alt="Next" />
         </div>
-        {data.map((slide) => (
-          <SwiperSlide key={slide.id}>
-            <img src={slide.imgs} alt={slide.alt} />
-          </SwiperSlide>
-        ))}
+
+        <SwiperSlide></SwiperSlide>
       </Swiper>
     </div>
   );
