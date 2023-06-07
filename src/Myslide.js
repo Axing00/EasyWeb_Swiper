@@ -57,7 +57,6 @@ export default () => {
       </div>
       {data.map((user) => (
         <SwiperSlide key={user.id}>
-          {/* <div>{user.testimonial}</div> */}
           <img src={user.imgs} alt={user.imgsTitle} />
         </SwiperSlide>
       ))}
