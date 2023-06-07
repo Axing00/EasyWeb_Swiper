@@ -46,7 +46,7 @@ export default () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   return (
-    <>
+    <div className="market_view">
       <Swiper
         modules={[Thumbs]}
         onSwiper={setThumbsSwiper}
@@ -86,6 +86,6 @@ export default () => {
           </SwiperSlide>
         ))}
       </Swiper>
-    </>
+    </div>
   );
 };
