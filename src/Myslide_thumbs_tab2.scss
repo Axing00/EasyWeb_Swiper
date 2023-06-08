@@ -230,3 +230,18 @@
 .icon_hide {
 	display: none;
 }
+
+.graph_area {
+	width: 100%;
+	height: 160px;
+	background-color: bisque;
+}
+
+.news_area {
+	p {
+		font-size: 14px;
+		font-weight: 500;
+		line-height: 22px;
+		color: $black_11;
+	}
+}

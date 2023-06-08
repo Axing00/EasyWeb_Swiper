@@ -115,7 +115,10 @@ export default () => {
                       </p>
                     </div>
                   </div>
-                  <div className="graph_area"></div>
+                  <div className="graph_area mg_t08"></div>
+                  <div className="news_area">
+                    <p>Amet minim mollit non deserunt ullamco est sit</p>
+                  </div>
                 </div>
               </a>
             </SwiperSlide>
