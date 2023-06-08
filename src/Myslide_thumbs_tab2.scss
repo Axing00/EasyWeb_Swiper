@@ -38,6 +38,8 @@
 	margin-top: 2.4rem;
 
 	.swiper-slide {
+		background-color: $white;
+
 		a {
 			display: block;
 			box-sizing: border-box;
@@ -80,24 +82,29 @@
 	width: 98px;
 	font-size: 1.4rem;
 	font-weight: 700;
+	line-height: 23px;
 	color: #fff;
 	box-sizing: border-box;
 	background-color: $btn-red;
-	border-radius: 1.2rem
-}
-
-.btn_red {
-	@include btn_condition;
+	border-radius: 1.2rem;
+	margin: 8px 0;
 
 	.plus_icon {
 		display: block;
 		width: 16px;
 		height: 16px;
 		margin-left: 0.8rem;
+		margin-top: 0.42rem;
+		margin-bottom: 0.32rem;
 
 		img {
 			display: block;
 			width: 100%;
 		}
 	}
+}
+
+.btn_red {
+	@include btn_condition;
+
 }

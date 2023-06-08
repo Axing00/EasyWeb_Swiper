@@ -11,8 +11,7 @@ import "swiper/scss/pagination";
 import "swiper/scss/navigation";
 import "swiper/scss/thumbs";
 
-// import prevButtonImage from "./imgs/button/chevron-left.svg";
-// import nextButtonImage from "./imgs/button/chevron-right.svg";
+// import img
 import plus from "./imgs/button/plus.svg";
 import x_icon from "./imgs/button/x.svg";
 
@@ -76,6 +75,7 @@ export default () => {
                     </figure>
                   </button>
                 </div>
+                <div className="sd_middle"></div>
               </a>
             </SwiperSlide>
             <SwiperSlide>Slide 2</SwiperSlide>
