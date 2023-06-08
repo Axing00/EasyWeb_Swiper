@@ -2,7 +2,7 @@
 import React, { Component, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Thumbs } from "swiper";
+import { Thumbs } from "swiper";
 
 // Import Swiper styles
 import "swiper/scss";
@@ -11,8 +11,9 @@ import "swiper/scss/pagination";
 import "swiper/scss/navigation";
 import "swiper/scss/thumbs";
 
-import prevButtonImage from "./imgs/button/chevron-left.svg";
-import nextButtonImage from "./imgs/button/chevron-right.svg";
+// import prevButtonImage from "./imgs/button/chevron-left.svg";
+// import nextButtonImage from "./imgs/button/chevron-right.svg";
+import plus from "./imgs/button/plus.svg";
 
 export default () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
@@ -27,14 +28,14 @@ export default () => {
 
   return (
     <div className="market_view">
-      {/* slide_title_tab */}
+      {/* slide_title_tab S*/}
       <Swiper
         modules={[Thumbs]}
         onSwiper={setThumbsSwiper}
         freeMode={true}
         watchSlidesProgress={true}
-        spaceBetween={0}
-        slidesPerView={4}
+        spaceBetween={16}
+        slidesPerView={6}
         className="mySwiper_thumbs"
       >
         {TabTitle.map((title, i) => (
@@ -43,28 +44,52 @@ export default () => {
           </SwiperSlide>
         ))}
       </Swiper>
-      {/* slide_content */}
+      {/* slide_title_tab E*/}
+      {/* slide_content S*/}
       <Swiper
-        modules={[Navigation, Pagination, Thumbs]}
+        modules={[Thumbs]}
         spaceBetween={20}
         slidesPerView={1}
-        navigation={{
-          prevEl: `.swiper-button-prev`,
-          nextEl: `.swiper-button-next`,
-        }}
-        pagination={{ clickable: true }}
         thumbs={{ swiper: thumbsSwiper }}
         className="mySwiper_cont"
       >
-        <div className="swiper-button-prev">
-          <img src={prevButtonImage} alt="Previous" />
-        </div>
-        <div className="swiper-button-next">
-          <img src={nextButtonImage} alt="Next" />
-        </div>
-
-        <SwiperSlide></SwiperSlide>
+        <SwiperSlide>
+          <Swiper
+            spaceBetween={50}
+            slidesPerView={3}
+            nested={true} // 중첩된 슬라이더를 지원하기 위해 nested prop 추가
+            key="nested-swiper" // 각각의 중첩된 슬라이더에 고유한 key prop 추가
+          >
+            <SwiperSlide>
+              <a href="#none" title="">
+                <p className="btn_condition btn_red">
+                  적극 매수
+                  <span className="plus_icon">
+                    <img src={plus} alt="plus_icon" />
+                  </span>
+                </p>
+              </a>
+            </SwiperSlide>
+            <SwiperSlide>Slide 2</SwiperSlide>
+            <SwiperSlide>Slide 3</SwiperSlide>
+            <SwiperSlide>Slide 4</SwiperSlide>
+          </Swiper>
+        </SwiperSlide>
+        <SwiperSlide>
+          <Swiper
+            spaceBetween={50}
+            slidesPerView={3}
+            nested={true} // 중첩된 슬라이더를 지원하기 위해 nested prop 추가
+            key="nested-swiper" // 각각의 중첩된 슬라이더에 고유한 key prop 추가
+          >
+            <SwiperSlide>Slide 5</SwiperSlide>
+            <SwiperSlide>Slide 6</SwiperSlide>
+            <SwiperSlide>Slide 7</SwiperSlide>
+            <SwiperSlide>Slide 8</SwiperSlide>
+          </Swiper>
+        </SwiperSlide>
       </Swiper>
+      {/* slide_content E*/}
     </div>
   );
 };

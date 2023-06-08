@@ -6,6 +6,7 @@ import MyslideThumbsTab2 from "./Myslide_thumbs_tab_2";
 // import MyslideThumbsTab1 from "./Myslide_thumbs_tab_1";
 
 import "./App.scss";
+import "./Myslide_thumbs_tab2.scss";
 
 class App extends Component {
   render() {

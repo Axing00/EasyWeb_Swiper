@@ -1,0 +1,41 @@
+@import "assets/variables";
+
+.mySwiper_thumbs {
+	width: 100%;
+
+	.swiper-slide {
+		width: auto !important;
+		display: inline-block !important;
+
+	}
+
+}
+
+@mixin btn_condition {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 98px;
+	font-size: 1.4rem;
+	font-weight: 700;
+	color: #fff;
+	box-sizing: border-box;
+	background-color: $btn-red;
+	border-radius: 1.2rem
+}
+
+.btn_red {
+	@include btn_condition;
+
+	.plus_icon {
+		display: block;
+		width: 16px;
+		height: 16px;
+		margin-left: 0.8rem;
+
+		img {
+			display: block;
+			width: 100%;
+		}
+	}
+}

@@ -1,0 +1,60 @@
+// IR
+@mixin hide {
+	overflow: hidden;
+	display: block;
+	position: absolute;
+	border: 0;
+	width: 1px;
+	height: 1px;
+	clip: rect(1px, 1px, 1px, 1px);
+}
+
+// 포지션
+@mixin posi($x, $y) {
+	position: absolute;
+	left: $x;
+	top: $y;
+
+	@if $x ==50% and $y ==50% {
+		transform: translate(-50%, -50%);
+	}
+
+	@else if $x ==50% {
+		transform: translateX(-50%);
+	}
+
+	@else if $y ==50% {
+		transform: translateY(-50%);
+	}
+}
+
+
+// REM
+@function rem($px, $fontbase : 10) {
+	$sum : calc(($px / $fontbase) * 1rem);
+	@return $sum;
+}
+
+
+// 반응형
+$mobile-width: 360px;
+$tablet-width: 1141px;
+$desktop-width: 1159px;
+
+@mixin mobile {
+	@media (max-width: #{$tablet-width - 1px}) {
+		@content;
+	}
+}
+
+@mixin tablet {
+	@media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media (min-width: #{$desktop-width}) {
+		@content;
+	}
+}
