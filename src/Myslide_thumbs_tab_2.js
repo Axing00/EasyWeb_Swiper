@@ -35,7 +35,7 @@ export default () => {
         freeMode={true}
         watchSlidesProgress={true}
         spaceBetween={16}
-        slidesPerView={6}
+        slidesPerView={3}
         className="mySwiper_thumbs"
       >
         {TabTitle.map((title, i) => (
@@ -48,7 +48,7 @@ export default () => {
       {/* slide_content S*/}
       <Swiper
         modules={[Thumbs]}
-        spaceBetween={20}
+        spaceBetween={0}
         slidesPerView={1}
         thumbs={{ swiper: thumbsSwiper }}
         className="mySwiper_cont"
