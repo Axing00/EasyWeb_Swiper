@@ -14,6 +14,7 @@ import "swiper/scss/thumbs";
 // import prevButtonImage from "./imgs/button/chevron-left.svg";
 // import nextButtonImage from "./imgs/button/chevron-right.svg";
 import plus from "./imgs/button/plus.svg";
+import plus from "./imgs/button/plus.svg";
 
 export default () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
@@ -40,7 +41,7 @@ export default () => {
       >
         {TabTitle.map((title, i) => (
           <SwiperSlide key={i}>
-            <span>{title}</span>
+            <span className="tab_tit">{title}</span>
           </SwiperSlide>
         ))}
       </Swiper>
@@ -62,6 +63,9 @@ export default () => {
           >
             <SwiperSlide>
               <a href="#none" title="">
+                <button>
+                  <img src="" alt="">
+                </button>
                 <p className="btn_condition btn_red">
                   적극 매수
                   <span className="plus_icon">
