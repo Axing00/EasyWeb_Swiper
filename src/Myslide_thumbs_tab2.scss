@@ -36,6 +36,41 @@
 
 .mySwiper_cont {
 	margin-top: 2.4rem;
+
+	.swiper-slide {
+		a {
+			display: block;
+			box-sizing: border-box;
+			padding: 0 12px;
+
+			.sd_top {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				margin-top: 4px;
+				margin-bottom: 8px;
+
+				.delete_btn {
+					display: flex;
+					align-items: center;
+					justify-content: flex-end;
+					width: 40px;
+					height: 40px;
+
+					figure {
+						width: 24px;
+						height: 24px;
+
+						img {
+							width: 100%;
+							display: block;
+						}
+
+					}
+				}
+			}
+		}
+	}
 }
 
 @mixin btn_condition {

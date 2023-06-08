@@ -14,7 +14,7 @@ import "swiper/scss/thumbs";
 // import prevButtonImage from "./imgs/button/chevron-left.svg";
 // import nextButtonImage from "./imgs/button/chevron-right.svg";
 import plus from "./imgs/button/plus.svg";
-import plus from "./imgs/button/plus.svg";
+import x_icon from "./imgs/button/x.svg";
 
 export default () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
@@ -56,22 +56,26 @@ export default () => {
       >
         <SwiperSlide>
           <Swiper
-            spaceBetween={50}
-            slidesPerView={3}
+            spaceBetween={0}
+            slidesPerView={1.5}
             nested={true} // 중첩된 슬라이더를 지원하기 위해 nested prop 추가
             key="nested-swiper" // 각각의 중첩된 슬라이더에 고유한 key prop 추가
           >
             <SwiperSlide>
               <a href="#none" title="">
-                <button>
-                  <img src="" alt="">
-                </button>
-                <p className="btn_condition btn_red">
-                  적극 매수
-                  <span className="plus_icon">
-                    <img src={plus} alt="plus_icon" />
-                  </span>
-                </p>
+                <div className="sd_top">
+                  <p className="btn_condition btn_red">
+                    적극 매수
+                    <span className="plus_icon">
+                      <img src={plus} alt="plus_icon" />
+                    </span>
+                  </p>
+                  <button className="delete_btn">
+                    <figure>
+                      <img src={x_icon} alt="x_icon" />
+                    </figure>
+                  </button>
+                </div>
               </a>
             </SwiperSlide>
             <SwiperSlide>Slide 2</SwiperSlide>
