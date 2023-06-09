@@ -11,7 +11,7 @@ import "swiper/scss/effect-fade";
 import "swiper/scss/pagination";
 import "swiper/scss/navigation";
 import "swiper/scss/thumbs";
-import "./Myslide_thumbs_tab2.scss";
+import "./Myslide_thumbs_tab_2.scss";
 // import img
 import plus from "./imgs/button/plus.svg";
 import x_icon from "./imgs/button/x.svg";
@@ -33,6 +33,10 @@ const MyslideThumbsTab = ({ allowTouchMove, ...restProps }) => {
     effect: "none",
     allowTouchMove: allowTouchMove,
   };
+
+  // ++ 문제점 :
+  // 스와이퍼의 fade 효과를 켰을때, 슬라이드가 매끄럽게 넘어가지지 않는 현상발생
+  // 가장 큰 슬라이드 영역의 allowTouchMove 먹였을때 , 스와이퍼의 effect 효과와 뭔가 충돌이 일어나는듯함 해결점을 못찾음
 
   return (
     <div className="market_view">
