@@ -1,6 +1,34 @@
 @import "assets/mixins";
 @import "assets/variables";
 
+.mg_08 {
+	margin: $mg_08;
+}
+
+.mg_0408 {
+	margin: $mg_0408;
+}
+
+.mg_t00 {
+	margin-top: $mg_t00;
+}
+
+.mg_t04 {
+	margin-top: $mg_t04;
+}
+
+.mg_t08 {
+	margin-top: $mg_t08;
+}
+
+.mg_t40 {
+	margin-top: $mg_t40;
+}
+
+.icon_hide {
+	display: none;
+}
+
 .mySwiper_thumbs {
 	width: 100%;
 
@@ -84,7 +112,6 @@
 	color: #fff;
 	padding: 0 9px 0 12px;
 	box-sizing: border-box;
-	background-color: $btn-red;
 	border-radius: 1.2rem;
 	word-break: keep-all;
 
@@ -93,7 +120,7 @@
 		width: 16px;
 		height: 16px;
 		margin-left: 0.8rem;
-		margin-top: 0.42rem;
+		margin-top: 0.41rem;
 		margin-bottom: 0.32rem;
 		flex-shrink: 0;
 
@@ -106,11 +133,18 @@
 
 .btn_red {
 	@include btn_condition;
+	background-color: $btn-red;
+}
+
+.btn_green {
+	@include btn_condition;
+	background-color: $btn-red;
 }
 
 .event_name {
 	display: flex;
 	align-items: center;
+	flex-shrink: 0;
 }
 
 .flag_box {
@@ -128,8 +162,8 @@
 		box-shadow: 0px 0px 1.5px rgba(0, 0, 0, 1);
 
 		&:first-child {
-			left: 0;
 			top: 0;
+			left: 0;
 			z-index: 2;
 		}
 
@@ -140,10 +174,10 @@
 		}
 
 		img {
-			object-fit: cover;
 			display: block;
 			width: 100%;
 			height: 100%;
+			object-fit: cover;
 			@include posi(50%, 50%);
 		}
 	}
@@ -189,11 +223,11 @@
 .rates_area {
 
 	.bid {
-		font-family: 'Roboto', sans-serif;
 		font-size: 2.4rem;
 		font-weight: 700;
 		line-height: 32px;
 		color: $black_11;
+		font-family: 'Roboto', sans-serif;
 	}
 
 	.rates_change {
@@ -203,10 +237,10 @@
 		p {
 			display: flex;
 			align-items: center;
-			font-family: 'Roboto', sans-serif;
 			font-size: 1.4rem;
 			font-weight: 700;
 			color: $green_08;
+			font-family: 'Roboto', sans-serif;
 
 			&:not(:last-child) {
 				margin-right: 8px;
@@ -227,11 +261,10 @@
 	}
 }
 
-.icon_hide {
-	display: none;
-}
-
 .graph_area {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	width: 100%;
 	height: 160px;
 	background-color: bisque;
@@ -239,9 +272,14 @@
 
 .news_area {
 	p {
+		display: -webkit-box;
 		font-size: 14px;
 		font-weight: 500;
 		line-height: 22px;
 		color: $black_11;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
 	}
 }

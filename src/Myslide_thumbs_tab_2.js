@@ -10,7 +10,7 @@ import "swiper/scss/free-mode";
 import "swiper/scss/pagination";
 import "swiper/scss/navigation";
 import "swiper/scss/thumbs";
-
+import "./Myslide_thumbs_tab2.scss";
 // import img
 import plus from "./imgs/button/plus.svg";
 import x_icon from "./imgs/button/x.svg";
@@ -50,7 +50,7 @@ export default () => {
       {/* slide_content S*/}
       <Swiper
         modules={[Thumbs]}
-        spaceBetween={0}
+        spaceBetween={16}
         slidesPerView={1}
         thumbs={{ swiper: thumbsSwiper }}
         className="mySwiper_cont"
@@ -115,9 +115,14 @@ export default () => {
                       </p>
                     </div>
                   </div>
-                  <div className="graph_area mg_t08"></div>
-                  <div className="news_area">
-                    <p>Amet minim mollit non deserunt ullamco est sit</p>
+                  <div className="graph_area mg_t08">차트영역</div>
+                  <div className="news_area mg_t08">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      At, corporis enim pariatur architecto porro optio
+                      assumenda aliquid. Vel laudantium incidunt in quod animi
+                      impedit minima, asperiores consectetur, laborum sit unde?
+                    </p>
                   </div>
                 </div>
               </a>
@@ -125,6 +130,19 @@ export default () => {
             <SwiperSlide>Slide 2</SwiperSlide>
             <SwiperSlide>Slide 3</SwiperSlide>
             <SwiperSlide>Slide 4</SwiperSlide>
+          </Swiper>
+        </SwiperSlide>
+        <SwiperSlide>
+          <Swiper
+            spaceBetween={50}
+            slidesPerView={3}
+            nested={true}
+            key="nested-swiper"
+          >
+            <SwiperSlide>Slide 5</SwiperSlide>
+            <SwiperSlide>Slide 6</SwiperSlide>
+            <SwiperSlide>Slide 7</SwiperSlide>
+            <SwiperSlide>Slide 8</SwiperSlide>
           </Swiper>
         </SwiperSlide>
         <SwiperSlide>
