@@ -11,7 +11,8 @@ class App extends Component {
   render() {
     return (
       <div>
-        <MyslideThumbsTab2 allowTouchMove={false}></MyslideThumbsTab2>
+        <MyslideThumbsTab2 allowTouchMove={true}></MyslideThumbsTab2>
+        {/* <MyslideThumbsTab2></MyslideThumbsTab2> */}
       </div>
     );
   }

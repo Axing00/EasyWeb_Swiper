@@ -29,8 +29,15 @@
 	display: none;
 }
 
+
+.market_view {
+	margin: 0 16px;
+}
+
+
 .mySwiper_thumbs {
 	width: 100%;
+	cursor: pointer;
 
 	.swiper-slide {
 		display: inline-block !important;
@@ -73,7 +80,26 @@
 			display: block;
 			padding: 0 12px;
 			box-sizing: border-box;
+
+			&.emty_slide {
+				background-color: $gray_f4;
+				height: 380px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				.add_icon {
+					width: 48px;
+					height: 48px;
+
+					img {
+						display: block;
+						width: 100%;
+					}
+				}
+			}
 		}
+
 	}
 
 	.sd_top {

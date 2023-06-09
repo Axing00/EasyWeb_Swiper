@@ -2,7 +2,7 @@
 import React, { Component, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectFade, Thumbs } from "swiper";
+import { Thumbs } from "swiper";
 
 // Import Swiper styles
 import "swiper/scss";
@@ -50,8 +50,8 @@ export default () => {
       {/* slide_title_tab E*/}
       {/* slide_content S*/}
       <Swiper
-        modules={[EffectFade, Thumbs]}
-        effect={"fade"}
+        modules={[Thumbs]}
+        // effect={"fade"}
         spaceBetween={16}
         slidesPerView={1}
         thumbs={{ swiper: thumbsSwiper }}
